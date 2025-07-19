@@ -19,8 +19,8 @@ out/
 secrets.json
 
 # EF Core Migrations snapshots
-Migrations/*.Designer.cs
-Migrations/*Snapshot.cs
+EnsinE.CRM/Migrations/*.Designer.cs
+EnsinE.CRM/Migrations/*Snapshot.cs
 
 # Local database
 *.mdf
@@ -30,3 +30,8 @@ Migrations/*Snapshot.cs
 *.db
 *.bak
 .vs/
+*.sln
+*.user
+*.userosscache
+*.sln.docstates
+.dockerignore
