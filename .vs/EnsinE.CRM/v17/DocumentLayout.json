@@ -3,40 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Migrations\\20250719101722_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EnsinE.CRM\\Migrations\\20250719101722_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/EnsinECRM/True/SqlTable/dbo.Clientes.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\ensine.crm.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\ensine.crm.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|c:\\users\\lopeso\\source\\repos\\ensine.crm\\ensine.crm\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B932BE50-CF97-430B-9833-EB880C9DE422}|EnsinE.CRM\\EnsinE.CRM.csproj|solutionrelative:ensine.crm\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,123 +33,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\.gitignore",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\.gitignore",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\.gitignore",
-              "RelativeToolTip": "EnsinE.CRM\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAEAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-07-19T10:20:01.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250719101722_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Migrations\\20250719101722_InitialCreate.cs",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\Migrations\\20250719101722_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Migrations\\20250719101722_InitialCreate.cs",
-              "RelativeToolTip": "EnsinE.CRM\\Migrations\\20250719101722_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T10:17:22.866Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Program.cs",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\Program.cs",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Program.cs",
-              "RelativeToolTip": "EnsinE.CRM\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T10:10:12.678Z",
-              "EditorCaption": ""
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Views\\Produtos\\Index.cshtml",
+              "RelativeDocumentMoniker": "EnsinE.CRM\\Views\\Produtos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Views\\Produtos\\Index.cshtml",
+              "RelativeToolTip": "EnsinE.CRM\\Views\\Produtos\\Index.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAjwCsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-19T12:45:27.95Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "EnsinE.CRM\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "EnsinE.CRM\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "EnsinE.CRM\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwFAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T10:06:09.782Z",
+              "WhenOpened": "2025-07-19T12:16:02.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "EnsinE.CRM\\Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "EnsinE.CRM\\Views\\Clientes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-19T12:27:43.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\appsettings.json",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\appsettings.json",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\appsettings.json",
-              "RelativeToolTip": "EnsinE.CRM\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-19T10:07:33.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\appsettings.Development.json",
-              "RelativeToolTip": "EnsinE.CRM\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-19T10:07:30.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Models\\Produto.cs",
-              "RelativeToolTip": "EnsinE.CRM\\Models\\Produto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T10:05:11.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "EnsinE.CRM\\Models\\Cliente.cs",
               "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Models\\Cliente.cs",
               "RelativeToolTip": "EnsinE.CRM\\Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T10:04:40.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T12:26:55.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EnsinE.CRM",
-              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\EnsinE.CRM.csproj",
-              "RelativeDocumentMoniker": "EnsinE.CRM\\EnsinE.CRM.csproj",
-              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\EnsinE.CRM.csproj",
-              "RelativeToolTip": "EnsinE.CRM\\EnsinE.CRM.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-19T10:02:24.315Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "dbo.Clientes.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/EnsinECRM/True/SqlTable/dbo.Clientes.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/EnsinECRM/True/SqlTable/dbo.Clientes.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-19T12:27:13.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "EnsinE.CRM\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lopeso\\source\\repos\\EnsinE.CRM\\EnsinE.CRM\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "EnsinE.CRM\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-19T12:19:54.348Z"
             }
           ]
         }

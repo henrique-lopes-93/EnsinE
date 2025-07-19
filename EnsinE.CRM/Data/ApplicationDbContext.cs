@@ -9,15 +9,20 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     public DbSet<Cliente> Clientes => Set<Cliente>();
-    public DbSet<Produto> Produtos => Set<Produto>();
+    public DbSet<Produto> Produtos { get; set; } = default!;
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Produto>()
-            .HasOne(p => p.Cliente)
-            .WithMany(c => c.Produtos)
-            .HasForeignKey(p => p.ClienteId);
+        modelBuilder.Entity<Cliente>()
+        .HasOne(c => c.Produto)
+        .WithMany() // Produto não precisa conhecer os clientes
+        .HasForeignKey(c => c.ProdutoId);
+
+  
+         
     }
+
 }
