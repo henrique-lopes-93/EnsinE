@@ -59,25 +59,27 @@ namespace EnsinE.CRM.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ClienteId,NomeCompleto,Telefone,Email,Desconto,Vendedor,ProdutoId")] Cliente cliente)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(cliente);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+            Console.WriteLine($"ProdutoId recebido: {cliente.ProdutoId}");
 
-            // Exibe erros no console para debug
-            foreach (var modelState in ModelState.Values)
+            if (!ModelState.IsValid)
             {
-                foreach (var error in modelState.Errors)
+                // Exibe erros no console para debug
+                foreach (var modelState in ModelState.Values)
                 {
-                    Console.WriteLine(error.ErrorMessage);
+                    foreach (var error in modelState.Errors)
+                    {
+                        Console.WriteLine(error.ErrorMessage);
+                    }
                 }
+
+                // Mantém filtro de produtos disponíveis
+                ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.Situacao), "ProdutoId", "Nome", cliente.ProdutoId);
+                return View(cliente);
             }
 
-            // Mantém filtro de produtos disponíveis
-            ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.Situacao), "ProdutoId", "Nome", cliente.ProdutoId);
-            return View(cliente);
+            _context.Add(cliente);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Clientes/Edit/5
@@ -170,6 +172,25 @@ namespace EnsinE.CRM.Controllers
         private bool ClienteExists(int id)
         {
             return _context.Clientes.Any(e => e.ClienteId == id);
+        }
+
+
+        public async Task<IActionResult> PorProduto(int? produtoId)
+        {
+            if (produtoId == null)
+                return NotFound();
+
+            var produto = await _context.Produtos.FindAsync(produtoId);
+            if (produto == null)
+                return NotFound();
+
+            var clientes = await _context.Clientes
+                .Include(c => c.Produto)
+                .Where(c => c.ProdutoId == produtoId)
+                .ToListAsync();
+
+            ViewBag.ProdutoNome = produto.Nome;
+            return View(clientes);
         }
     }
 }
