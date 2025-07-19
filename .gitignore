@@ -1,0 +1,37 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# DotNet secrets
+secrets.json
+
+# EF Core Migrations snapshots
+EnsinE.CRM/Migrations/*.Designer.cs
+EnsinE.CRM/Migrations/*Snapshot.cs
+
+# Local database
+*.mdf
+*.ldf
+
+# Others
+*.db
+*.bak
+.vs/
+*.sln
+*.user
+*.userosscache
+*.sln.docstates
+.dockerignore
