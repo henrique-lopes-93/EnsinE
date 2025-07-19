@@ -1,0 +1,31 @@
+﻿@model IEnumerable<EnsinE.CRM.Models.Cliente>
+@{
+    ViewData["Title"] = "Clientes do Produto";
+}
+
+<h2>Clientes do Produto: @ViewBag.ProdutoNome</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.NomeCompleto)</th>
+            <th>@Html.DisplayNameFor(m => m.Email)</th>
+            <th>@Html.DisplayNameFor(m => m.Telefone)</th>
+            <th>@Html.DisplayNameFor(m => m.Desconto)</th>
+            <th>@Html.DisplayNameFor(m => m.Vendedor)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.NomeCompleto</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Telefone</td>
+                <td>@cliente.Desconto</td>
+                <td>@cliente.Vendedor</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Produtos" asp-action="Index" class="btn btn-secondary">Voltar</a>

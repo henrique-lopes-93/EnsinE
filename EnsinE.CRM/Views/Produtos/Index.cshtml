@@ -25,26 +25,26 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Situacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comissao)
-            </td>
-            <td>
-            
-                    <a asp-action="Details" asp-route-id="@item.ProdutoId" disabled>Clientes</a>
-           
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            var rowClass = item.Situacao ? "table-success" : "";
+            <tr class="@rowClass">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Situacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comissao)
+                </td>
+                <td>
+                    <a asp-controller="Clientes" asp-action="PorProduto" asp-route-produtoId="@item.ProdutoId">Clientes</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
