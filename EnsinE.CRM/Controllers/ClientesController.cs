@@ -26,24 +26,6 @@ namespace EnsinE.CRM.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Clientes/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes
-                .Include(c => c.Produto)
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            return View(cliente);
-        }
 
         // GET: Clientes/Create
         public IActionResult Create()
@@ -61,6 +43,7 @@ namespace EnsinE.CRM.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ClienteId,NomeCompleto,Telefone,Email,Desconto,Vendedor,ProdutoId")] Cliente cliente)
         {
+
             Console.WriteLine($"ProdutoId recebido: {cliente.ProdutoId}");
             if (!ModelState.IsValid)
             {
@@ -85,7 +68,7 @@ namespace EnsinE.CRM.Controllers
             if (cliente == null)
                 return NotFound();
 
-            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "ProdutoId", "Nome", cliente.ProdutoId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.Situacao), "ProdutoId", "Nome", cliente.ProdutoId);
             ViewBag.FormAction = "Edit";
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 return PartialView("_FormClientePartial", cliente);
@@ -97,8 +80,7 @@ namespace EnsinE.CRM.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ClienteId,NomeCompleto,Telefone,Email,Desconto,Vendedor,ProdutoId")] Cliente cliente)
         {
-            if (id != cliente.ClienteId)
-                return NotFound();
+            cliente.ClienteId = id;
 
             if (!ModelState.IsValid)
             {

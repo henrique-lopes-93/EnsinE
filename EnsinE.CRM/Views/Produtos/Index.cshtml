@@ -1,10 +1,9 @@
 @model IEnumerable<EnsinE.CRM.Models.Produto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listagem de Produtos";
 }
 
-<h1>Cursos Disponíveis</h1>
 
 <table class="table">
     <thead>
@@ -15,13 +14,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Preco)
             </th>
-            <th>
+            <th class="d-none d-sm-table-cell">
                 @Html.DisplayNameFor(model => model.Situacao)
             </th>
-            <th>
+            <th class="d-none d-sm-table-cell">
                 @Html.DisplayNameFor(model => model.Comissao)
             </th>
-            <th></th>
+            <th>
+                Listar Clientes
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -35,14 +36,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Preco)
                 </td>
-                <td>
+                <td class="d-none d-sm-table-cell">
                     @Html.DisplayFor(modelItem => item.Situacao)
                 </td>
-                <td>
+                <td class="d-none d-sm-table-cell">
                     @Html.DisplayFor(modelItem => item.Comissao)
                 </td>
                 <td>
-                    <a asp-controller="Clientes" asp-action="PorProduto" asp-route-produtoId="@item.ProdutoId">Clientes</a>
+                    <a class="btn btn-primary" asp-controller="Clientes" asp-action="PorProduto" asp-route-produtoId="@item.ProdutoId">Clientes</a>
                 </td>
             </tr>
         }
