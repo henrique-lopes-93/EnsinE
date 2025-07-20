@@ -20,3 +20,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+li .nav-item .active {
+    border-bottom-color: #258cfb;
+}

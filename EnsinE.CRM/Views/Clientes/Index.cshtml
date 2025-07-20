@@ -1,65 +1,154 @@
 @model IEnumerable<EnsinE.CRM.Models.Cliente>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listagem de Clientes";
 }
 
-<h1>Lista de Clientes</h1>
-
 <p>
-    <a asp-action="Create">Novo Cliente</a>
+    <button id="btnNovoCliente" class="btn btn-success">Novo Cliente</button>
 </p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.NomeCompleto)
             </th>
-            <th>
+            <th class="d-none d-sm-table-cell">
                 @Html.DisplayNameFor(model => model.Telefone)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th>
+            <th class="d-none d-sm-table-cell">
                 @Html.DisplayNameFor(model => model.Desconto)
             </th>
-            <th>
+            <th class="d-none d-sm-table-cell">
                 @Html.DisplayNameFor(model => model.Vendedor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Produto)
             </th>
-            <th></th>
+            <th>
+                Opções
+            </th>
         </tr>
     </thead>
     <tbody>
+
 @foreach (var item in Model) {
-        <tr>
+        <tr id="cliente-row-@item.ClienteId">
             <td>
                 @Html.DisplayFor(modelItem => item.NomeCompleto)
             </td>
-            <td>
+                <td class="d-none d-sm-table-cell">
                 @Html.DisplayFor(modelItem => item.Telefone)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
+                <td class="d-none d-sm-table-cell">
                 @Html.DisplayFor(modelItem => item.Desconto)
             </td>
-            <td>
+                <td class="d-none d-sm-table-cell">
                 @Html.DisplayFor(modelItem => item.Vendedor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Produto.Nome)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ClienteId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ClienteId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ClienteId">Delete</a>
+                <a class="btn btn-small btn-primary btnEditarCliente" asp-action="Edit" asp-route-id="@item.ClienteId">Editar</a>
+                <a class="btn btn-small btn-danger btnDeleteCliente" asp-action="Delete" asp-route-id="@item.ClienteId">Deletar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="clienteModal" data-backdrop="static" tabindex="-1" aria-labelledby="clienteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="clienteModalLabel">Adicionar novo Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('#btnNovoCliente').click(function (e) {
+                e.preventDefault();
+                $('#clienteModalLabel').text('Adicionar Cliente');
+                $.get('@Url.Action("Create", "Clientes")', function (data) {
+                    $('#clienteModal .modal-body').html(data);
+                    $('#clienteModal').modal('show');
+                });
+            });
+
+            $('.btnEditarCliente').click(function (e) {
+                e.preventDefault();
+                $('#clienteModalLabel').text('Editar Cliente');
+                var url = $(this).attr('href');
+                $.get(url, function (data) {
+                    $('#clienteModal .modal-body').html(data);
+                    $('#clienteModal').modal('show');
+                });
+            });
+
+            $(document).on('submit', '#clienteForm', function (e) {
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function (result) {
+                    if ($(result).find('.text-danger').length === 0) {
+                        $('#clienteModal').modal('hide');
+                        location.reload();
+                    } else {      
+                        $('#clienteModal .modal-body').html(result);
+                    }
+                }
+            });
+        });
+
+       $('.btnDeleteCliente').click(function (e) {
+            e.preventDefault();
+                $('#clienteModalLabel').text('Deletar Cliente');
+            var url = $(this).attr('href');
+            $.get(url, function (data) {
+                $('#clienteModal .modal-body').html(data);
+                $('#clienteModal').modal('show');
+            });
+        });
+
+     
+        $(document).on('submit', 'form[asp-action="DeleteConfirmed"]', function (e) {
+            e.preventDefault();
+            
+            var form = $(this);
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function () {
+                    $('#clienteModal').modal('hide');
+                    alert('treta');
+                    $('#cliente-row-' + clienteId).fadeOut(3500, function () {
+                    $(this).remove();
+                });
+                }
+            });
+        });
+       
+    });
+
+
+    </script>
+}

@@ -1,0 +1,13 @@
+﻿@model EnsinE.CRM.Models.Cliente
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="ClienteId" />
+    <div class="mb-3">
+        <p>Tem certeza que deseja excluir o cliente <strong>@Model.NomeCompleto</strong>?</p>
+    </div>
+    <div class="text-end">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-danger">Excluir</button>
+    </div>
+</form>
