@@ -49,9 +49,11 @@ namespace EnsinE.CRM.Controllers
         public IActionResult Create()
         {
             ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.Situacao), "ProdutoId", "Nome");
+            ViewBag.FormAction = "Create";
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return PartialView("_FormClientePartial", new Cliente());
             return View();
         }
-
         // POST: Clientes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -60,20 +62,11 @@ namespace EnsinE.CRM.Controllers
         public async Task<IActionResult> Create([Bind("ClienteId,NomeCompleto,Telefone,Email,Desconto,Vendedor,ProdutoId")] Cliente cliente)
         {
             Console.WriteLine($"ProdutoId recebido: {cliente.ProdutoId}");
-
             if (!ModelState.IsValid)
             {
-                // Exibe erros no console para debug
-                foreach (var modelState in ModelState.Values)
-                {
-                    foreach (var error in modelState.Errors)
-                    {
-                        Console.WriteLine(error.ErrorMessage);
-                    }
-                }
-
-                // Mantém filtro de produtos disponíveis
                 ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.Situacao), "ProdutoId", "Nome", cliente.ProdutoId);
+                if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                    return PartialView("_FormClientePartial", cliente);
                 return View(cliente);
             }
 
@@ -86,70 +79,78 @@ namespace EnsinE.CRM.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente == null)
-            {
                 return NotFound();
-            }
+
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "ProdutoId", "Nome", cliente.ProdutoId);
+            ViewBag.FormAction = "Edit";
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return PartialView("_FormClientePartial", cliente);
+
             return View(cliente);
         }
-
-        // POST: Clientes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //POST Clientes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ClienteId,NomeCompleto,Telefone,Email,Desconto,Vendedor,ProdutoId")] Cliente cliente)
         {
             if (id != cliente.ClienteId)
-            {
                 return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                ViewData["ProdutoId"] = new SelectList(_context.Produtos, "ProdutoId", "Nome", cliente.ProdutoId);
+                if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                    return PartialView("_FormClientePartial", cliente);
+                return View(cliente);
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    _context.Update(cliente);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ClienteExists(cliente.ClienteId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Update(cliente);
+                await _context.SaveChangesAsync();
             }
-            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "ProdutoId", "Nome", cliente.ProdutoId);
-            return View(cliente);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ClienteExists(cliente.ClienteId))
+                    return NotFound();
+                else
+                    throw;
+            }
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return Json(new
+                {
+                    success = true,
+                    clienteId = cliente.ClienteId,
+                    nomeCompleto = cliente.NomeCompleto,
+                    telefone = cliente.Telefone,
+                    email = cliente.Email,
+                    desconto = cliente.Desconto,
+                    vendedor = cliente.Vendedor,
+                    produtoNome = (await _context.Produtos.FindAsync(cliente.ProdutoId))?.Nome
+                });
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Clientes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var cliente = await _context.Clientes
                 .Include(c => c.Produto)
                 .FirstOrDefaultAsync(m => m.ClienteId == id);
             if (cliente == null)
-            {
                 return NotFound();
-            }
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return PartialView("_DeleteClientePartial", cliente);
 
             return View(cliente);
         }
