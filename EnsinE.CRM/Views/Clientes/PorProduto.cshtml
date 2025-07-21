@@ -16,16 +16,26 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var cliente in Model)
+        @if (Model != null && Model.Any())
+        {
+            foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.NomeCompleto</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Telefone</td>
+                    <td>@cliente.Desconto</td>
+                    <td>@cliente.Vendedor</td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@cliente.NomeCompleto</td>
-                <td>@cliente.Email</td>
-                <td>@cliente.Telefone</td>
-                <td>@cliente.Desconto</td>
-                <td>@cliente.Vendedor</td>
+                <td colspan="5" class="text-center">Nenhum cliente encontrado para este produto.</td>
             </tr>
         }
+
     </tbody>
 </table>
 <a asp-controller="Produtos" asp-action="Index" class="btn btn-secondary">Voltar</a>

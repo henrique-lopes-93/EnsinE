@@ -24,14 +24,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @{
+                        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+                        var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+                    }
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item active">
+                        <li class="nav-item @(currentController == "Produtos" && currentAction == "Index" ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(currentController == "Clientes" && currentAction == "Index" ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
                         </li>
                     </ul>
+                    
                 </div>
             </div>
         </nav>

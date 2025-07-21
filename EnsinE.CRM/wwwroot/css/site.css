@@ -21,6 +21,6 @@ body {
   margin-bottom: 60px;
 }
 
-li .nav-item .active {
-    border-bottom-color: #258cfb;
+li.nav-item.active {
+    border-bottom: 2px solid #ff6a00;
 }
