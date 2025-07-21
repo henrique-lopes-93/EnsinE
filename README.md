@@ -20,7 +20,7 @@ O sistema permite o cadastro e gerenciamento de clientes associados a produtos. 
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download)
 - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
-- Visual Studio 2022 (ou VS Code)
+- Visual Studio 2022 (recomendado) ou VS Code com extensão C# (C# Dev Kit)
 
 
 ## 2. **Clone o Repositório**
@@ -54,7 +54,8 @@ dotnet build
 dotnet run
 ```
 
-**Haverá, na saída do comando em qual porta o serviço está rodando e ele estará disponível pelo navegador.**
+**Acesse a aplicação em: [http://localhost:5109](http://localhost:5109) (ou conforme informado no terminal)**
+
 
 
 
